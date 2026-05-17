@@ -5,21 +5,21 @@
 class Helmdiff < Formula
   desc "Diff two Helm chart versions before touching your cluster"
   homepage "https://github.com/jerphil/helmdiff"
-  version "0.1.3"
+  version "1.0.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jerphil/helmdiff/releases/download/v0.1.3/helmdiff_0.1.3_darwin_amd64.tar.gz"
-      sha256 "9a31a8dbe188f8f69ae0dab30b6ea9c86c0e296b00e1f8889af13d49e010a452"
+      url "https://github.com/jerphil/helmdiff/releases/download/v1.0.0/helmdiff_1.0.0_darwin_amd64.tar.gz"
+      sha256 "c2e6cc79fe60abeba65e34beead8c831c65985442dbc7c113e50bf491d8d47b2"
 
       define_method(:install) do
         bin.install "helmdiff"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jerphil/helmdiff/releases/download/v0.1.3/helmdiff_0.1.3_darwin_arm64.tar.gz"
-      sha256 "83b8dcc9a5d95a28e1b163a4ac253a618c33324199879290597f79a7a2eb980e"
+      url "https://github.com/jerphil/helmdiff/releases/download/v1.0.0/helmdiff_1.0.0_darwin_arm64.tar.gz"
+      sha256 "39f4f9b8ade7ce8ff95348b93f343f75113556bf00faf96613adf6cd5d83c707"
 
       define_method(:install) do
         bin.install "helmdiff"
@@ -29,15 +29,15 @@ class Helmdiff < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jerphil/helmdiff/releases/download/v0.1.3/helmdiff_0.1.3_linux_amd64.tar.gz"
-      sha256 "f36888fc77236d3704eec84290d7bc23a9a52bebd5606a46f97bc9dfc7cefe88"
+      url "https://github.com/jerphil/helmdiff/releases/download/v1.0.0/helmdiff_1.0.0_linux_amd64.tar.gz"
+      sha256 "c8ea383ca773b736a3c1d6bf582c705006a55cf5a3f19429a7eee76837d803b5"
       define_method(:install) do
         bin.install "helmdiff"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jerphil/helmdiff/releases/download/v0.1.3/helmdiff_0.1.3_linux_arm64.tar.gz"
-      sha256 "dce522ee1412196e4c6ebcd85e09ce23b937acf73546d55a83539e2e025110e2"
+      url "https://github.com/jerphil/helmdiff/releases/download/v1.0.0/helmdiff_1.0.0_linux_arm64.tar.gz"
+      sha256 "a826d7d099c0c707a6a46610b2168817ee665fec00aa8cfcde16550fd7475cbb"
       define_method(:install) do
         bin.install "helmdiff"
       end
